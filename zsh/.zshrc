@@ -111,4 +111,3 @@ export PATH="/usr/local/sbin:$PATH"
 
 source /Users/fredriksvensson/.op/plugins.sh
 
-[[ -s "/Users/fredriksvensson/.gvm/scripts/gvm" ]] && source "/Users/fredriksvensson/.gvm/scripts/gvm"
