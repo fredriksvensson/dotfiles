@@ -1,0 +1,19 @@
+[include]
+    path = ./profiles/git-personal.conf
+[includeIf "gitdir:~/work/"]
+    path = ./profiles/git-client-a.conf
+
+[user]
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHddGqJcF3W0OmFMqtb2cyMbTH/XK/4UMwO3Ap5GSInZyzBH3qC67rB8syOU3vMaSfoP3dYfZEQq3zU/fA5hoVr2WIYySLzmM2ZK342SqYlYWiCXOgz1OF8IZpRpbo1jJ/moBma3GbJS/pcovIrGmetCN+6NKH6Fqj5fRt+jpeVOTmYdG0yr2L42KORZQNy99M/p9Mt8m8qPyYO7NCkm7aFmhqTacaNMYzYxsGIQzsSkaHng7Y8caqJtZ2gnPovqyagJIdu3twKNvcYqLm8GvLE6bbvCb0qCKVe9MabuIFmAm1/fXBT5IW4Uw8TNbj6drUX7UpZqOTGkpOA7IcqO/wTI1iNsixCAOqBNl1khjFcN0XEbzd+CENcuAal84ufA4Oj9/WWhLhukx0tzmNgpHNtuEwHgvPMdBLIGKLeezvAXbZYZ9BBZXy6dulaJ4HKxo9MAHes7AjA1cEJOskbWzoF+efzlJAezQdFBAUPbLmOHQBjByUdEf4t5MixLithMVdFuxjRvJTG2E9679fQ6Tw4gjH3MlXr8LaMnnYVvDnkQKKEYZzvCEokvsxQvLp+rWvwj4DKbr/50my6s/zx227DtLWPAB/0IKcCuiMkt6ZtmiUMW+nQD9vR5rZP77L5phhEcFn1rxB+kkhKC6/fHjQ5tz4twcjMkpgSgyXFpwEuQ==
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
+[push]
+	autoSetupRemote = true

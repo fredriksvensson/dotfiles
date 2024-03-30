@@ -1,0 +1,6 @@
+Brewfile
+Makefile
+README.md
+\.git
+.gitignore
+secure-templates

@@ -1,0 +1,47 @@
+# directories we should begin searching for workspaces in. i just use home. shell expansion is supported
+search_paths:  
+    - "~/repos"
+    - "~/.dotfiles"
+
+# search branches will be pruned the path being explored contains any of these components
+exclude_path_components:
+  - .git
+  - .cargo
+  - .direnv
+  - node_modules
+  - venv
+  - target
+
+max_search_depth: 5
+session_name_path_components: 3
+
+workspace_definitions:
+    - name: rust
+      has_any_file:
+        - Cargo.toml
+        - Cargo.lock
+      default_layout: rust-dev
+
+    - name: other
+      has_any_file:
+        - .git
+        - .twm.yaml
+      default_layout: dev
+
+layouts:
+    - name: rust-dev
+      commands:
+        - tmux split-window -h
+        - tmux resize-pane -x 50
+        - tmux select-pane -t 0 
+        - tmux send-keys -t 1 'bacon' C-m
+        - tmux new-window
+        - tmux select-window 0
+        - nvim .
+
+    - name: dev
+      commands:
+        - tmux split-window -v
+        - tmux resize-pane -y 20
+        - tmux select-pane -t 0
+        - nvim .
