@@ -102,7 +102,6 @@ export GPG_TTY=$(tty)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias docker=podman
-alias vsu='npx @volvo/vce-service-util@latest'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
